@@ -1,0 +1,147 @@
+/* FUENTE  */
+@font-face {
+    font-family: fajala;
+    src: url(../fonts/fuente.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Helvetica, Arial;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/cubes.png) #f4f4f4;
+    font-size: 62.5%;
+}
+
+#header, #container {
+    width: 85%;
+    height: auto;
+    background: transparent;
+    margin: auto;
+}
+
+#logo {
+    text-align: left;
+    height: 10rem;
+    line-height: 9rem;
+    margin-left: 1rem;
+}
+
+.logo__text {
+    font-family: 'fajala', Helvetica;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    color: #2779CD;
+    text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+    transition: all 0.5s;
+}
+
+#nav {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.6rem;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px #ccc;
+    overflow: hidden;
+}
+
+.nav__list {
+    display: flex;
+    line-height: 4rem;
+    list-style-type: none;
+}
+
+.nav__list li {
+    border-right: 1px solid #d6d5d5;
+}
+
+.nav__link {
+    display: block;
+    padding: 0px 10px;
+    font-size: 1.5rem;
+    color: #2779CD;
+}
+
+#container {
+    min-height: 90rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#sidebar {
+    flex: 1;
+    order: 2;
+    min-height: 90rem;
+}
+
+#main {
+    flex: 3;
+    order: 1;
+    min-height: 55rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    margin-left: 2rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+#main a {
+    color: #333;
+}
+
+.main__title {
+    font-size: 3.2rem;
+    color: #444;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #ccc;
+    font-family: 'fajala';
+}
+
+.main__subtitle {
+    font-size: 2rem;
+    color: #2779CD;
+    letter-spacing: 1px;
+    font-family: 'fajala';
+    margin-top: 2.5rem;
+}
+
+.main__description {
+    margin-top: 8px;
+    font-size: 1.6rem;
+}
+
+#vertodas a {
+    display: block;
+    border-radius: 2px;
+    padding: 20px;
+    color: white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    font-size: 1.6rem;
+    width: 19rem;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.logo__text:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px 0px black;
+}
+
+.nav__link:hover {
+    background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
+    cursor: pointer;
+}

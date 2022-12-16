@@ -5,40 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de videojuegos</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
     <!-- CABECERA -->
     <header id="header">
         <!-- LOGO -->
         <div id="logo">
-            <a href="index.php">
+            <a href="index.php" class="logo__text">
                 Blog de Videojuegos
             </a>
         </div>
 
         <!-- MENU -->
         <nav id="nav">
-            <ul>
+            <ul class="nav__list">
                 <li>
-                    <a href="index.php">Inicio</a>
+                    <a href="index.php" class="nav__link">Inicio</a>
                 </li>
                 <li>
-                    <a href="index.php">Categoria 1</a>
+                    <a href="index.php" class="nav__link">Categoria 1</a>
                 </li>
                 <li>
-                    <a href="index.php">Categoria 2</a>
+                    <a href="index.php" class="nav__link">Categoria 2</a>
                 </li>
                 <li>
-                    <a href="index.php">Categoria 3</a>
+                    <a href="index.php" class="nav__link">Categoria 3</a>
                 </li>
                 <li>
-                    <a href="index.php">Categoria 4</a>
+                    <a href="index.php" class="nav__link">Categoria 4</a>
                 </li>
                 <li>
-                    <a href="index.php">Sobre mí</a>
+                    <a href="index.php" class="nav__link">Sobre mí</a>
                 </li>
                 <li>
-                    <a href="index.php">Contacto</a>
+                    <a href="index.php" class="nav__link">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -82,35 +84,46 @@
 
         <!-- MAIN -->
         <div id="main">
-            <h1>Ultimas entradas</h1>
+            <h1 class="main__title">Ultimas entradas</h1>
             <article class="entrada">
-                <h2>Titulo de mi entrada</h2>
-                <p>
-                    Descripcion de la entrada
-                </p>
+                <a href="">
+                    <h2 class="main__subtitle">Titulo de mi entrada</h2>
+                    <p class="main__description">
+                        Descripcion de la entrada
+                    </p>
+                </a>
             </article>
             
             <article class="entrada">
-                <h2>Titulo de mi entrada</h2>
-                <p>
-                    Descripcion de la entrada
-                </p>
+                <a href="">
+                    <h2 class="main__subtitle">Titulo de mi entrada</h2>
+                    <p class="main__description">
+                        Descripcion de la entrada
+                    </p>
+                </a>
             </article>
 
             <article class="entrada">
-                <h2>Titulo de mi entrada</h2>
-                <p>
-                    Descripcion de la entrada
-                </p>
+                <a href="">
+                    <h2 class="main__subtitle">Titulo de mi entrada</h2>
+                    <p class="main__description">
+                        Descripcion de la entrada
+                    </p>
+                </a>
             </article>
 
             <article class="entrada">
-                <h2>Titulo de mi entrada</h2>
-                <p>
-                    Descripcion de la entrada
-                </p>
+                <a href="">
+                    <h2 class="main__subtitle">Titulo de mi entrada</h2>
+                    <p class="main__description">
+                        Descripcion de la entrada
+                    </p>
+                </a>
             </article>
 
+            <div id="vertodas">
+                <a href="">Ver todas las entradas</a>
+            </div>
         </div>
     </div>
 

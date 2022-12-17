@@ -16,6 +16,16 @@
 
     <div id="register" class="sideblock">
         <h3 class="sideblock__title">Registrarse</h3>
+        <?php if( isset($_SESSION['completado']) ): ?>
+            <div class="alerta alerta-exito">
+                <?=$_SESSION['completado'] ?>
+            </div>
+        <?php elseif( isset($_SESSION['errores']['general']) ): ?>
+            <div class="alerta alerta-error">
+                <?=$_SESSION['completado']['general'] ?>
+            </div>
+        <?php endif; ?>
+        
         <form action="register.php" method="POST">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre">

@@ -177,6 +177,21 @@ input[type="button"], input[type="submit"] {
     font-size: 1.2rem;
 }
 
+.alerta {
+    padding: 5px;
+    width: 95%;
+    font-size: 1.2rem;
+    color: white;
+    background: green;
+    box-shadow: 0px 1px 3px #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.alerta-error {
+    background: red;
+}
+
 #footer {
     font-size: 1.6rem;
     width: 85%;

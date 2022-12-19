@@ -1,4 +1,5 @@
 <?php require_once 'conexion.php'?>
+<?php require_once 'includes/helpers.php'; ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -21,23 +22,24 @@
         </div>
 
         <!-- MENU -->
+        
         <nav id="nav">
             <ul class="nav__list">
                 <li>
                     <a href="index.php" class="nav__link">Inicio</a>
                 </li>
-                <li>
-                    <a href="index.php" class="nav__link">Categoria 1</a>
-                </li>
-                <li>
-                    <a href="index.php" class="nav__link">Categoria 2</a>
-                </li>
-                <li>
-                    <a href="index.php" class="nav__link">Categoria 3</a>
-                </li>
-                <li>
-                    <a href="index.php" class="nav__link">Categoria 4</a>
-                </li>
+                <?php 
+                    $categorias =  obtenerCategorias($db);
+                    if( !empty($categorias) ):
+                        while( $categoria = mysqli_fetch_assoc($categorias) ): 
+                ?>
+                            <li>
+                                <a href="categoria.php?id=<?=$categoria['id']?>" class="nav__link"><?=$categoria['nombre']?></a>
+                            </li>
+                <?php 
+                        endwhile;
+                    endif; 
+                ?>
                 <li>
                     <a href="index.php" class="nav__link">Sobre mí</a>
                 </li>

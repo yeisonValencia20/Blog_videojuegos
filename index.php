@@ -7,42 +7,26 @@
         <!-- MAIN -->
         <div id="main">
             <h1 class="main__title">Ultimas entradas</h1>
-            <article class="entrada">
-                <a href="">
-                    <h2 class="main__subtitle">Titulo de mi entrada</h2>
-                    <p class="main__description">
-                        Descripcion de la entrada
-                    </p>
-                </a>
-            </article>
+
+            <?php 
+                $entradas =  obtenerUltimasEntradas($db);
+                if( !empty($entradas) ):
+                    while( $entrada = mysqli_fetch_assoc($entradas) ):
+            ?>
+                        <article class="entrada">
+                            <a href="">
+                                <h2 class="main__subtitle"><?=$entrada['titulo']?></h2>
+                                <span class="fecha"><?= $entrada['categoria'].' | '.$entrada['fecha']; ?></span>
+                                <p class="main__description">
+                                    <?= substr($entrada['descripcion'], 0, 180)."..." ?>
+                                </p>
+                            </a>
+                        </article>
+            <?php
+                    endwhile;
+                endif;
+            ?>
             
-            <article class="entrada">
-                <a href="">
-                    <h2 class="main__subtitle">Titulo de mi entrada</h2>
-                    <p class="main__description">
-                        Descripcion de la entrada
-                    </p>
-                </a>
-            </article>
-
-            <article class="entrada">
-                <a href="">
-                    <h2 class="main__subtitle">Titulo de mi entrada</h2>
-                    <p class="main__description">
-                        Descripcion de la entrada
-                    </p>
-                </a>
-            </article>
-
-            <article class="entrada">
-                <a href="">
-                    <h2 class="main__subtitle">Titulo de mi entrada</h2>
-                    <p class="main__description">
-                        Descripcion de la entrada
-                    </p>
-                </a>
-            </article>
-
             <div id="vertodas">
                 <a href="">Ver todas las entradas</a>
             </div>
